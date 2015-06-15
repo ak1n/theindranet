@@ -1,0 +1,8 @@
+theindranet: xsensors project
+http://www.theindranet.com
+
+by ak1n, janu5, keystroke, arrguile
+2014-2015
+
+license: Creative Commons Attribution-ShareAlike 4.0 International License (http://creativecommons.org/licenses/by-sa/4.0/)
+based on: Eric Tsai's code written in 2014: https://github.com/homeautomationyay/OpenHab-RFM69

@@ -1,0 +1,162 @@
+{
+	"project_name": "my project",
+	"network_id": 101,
+	"gateway_id": 1,
+	"encrypt_key": "****16 digit alphanumeric random key here****",
+	"radio_frequency": "RF69_915MHZ",
+	"global_loop_delay": 2000,
+	"transmission_delay": 10,
+	"is_RFM69HW": 1,
+	"gateway_eth_mac": "0x90, 0xA2, 0xDA, 0x0D, 0x11, 0x11",
+	"mqtt_server_ip": "192, 168, 1, ****FINISH SERVER IP HERE****",
+	"mqtt_server_url": "tcp://localhost:****OPENHABPORT****",
+	"xmpp": {
+		"servername": "dukgo.com",
+		"username": "****USERNAME****",
+		"password": "****PASSWORD****",
+		"tlspin": "SHA256:****PIN****"
+	},	
+	"nodes": {
+		"alpha_node": {
+			"node_id": "21",
+			"sensors": {
+				"mysound":
+				{
+					"name": "my sound",
+					"type": "sound",
+					"pin": 7
+				},
+				"myswitch":
+				{
+					"name": "my reed",
+					"type": "reedswitch",
+					"pin": 8,
+					"actions": {
+						"open": {
+							"xmpp": {
+								"recipient": "****EMAIL RECIPIENT****",
+								"message": "openhab alert: ****sensorname**** opened"
+								}
+						}
+					}
+				},
+				"mydht":
+				{
+					"name": "my dht",
+					"type": "dht",
+					"model": "DHT21",
+					"pin": 6
+				},
+				"myultra":
+				{
+					"name": "my ultrasonic",
+					"type": "ultrason",
+					"dist_tolerance": 2,
+					"pin": 3,
+					"pin_trg": 5
+				},
+				"mypir":
+				{
+					"name": "my pir",
+					"type": "pir",
+					"pin": 4
+				}
+			}
+		},
+		"laundry": {
+			"enabled": 1,
+			"node_id": "22",
+			"sensors": {
+				"mysound":
+				{
+					"name": "my sound",
+					"type": "sound",
+					"pin": 7
+				}
+			}
+		},
+		"gamma_node": {
+			"enabled": 0,
+			"node_id": "23",
+			"sensors": {
+				"myswitch":
+				{
+					"name": "my reed",
+					"type": "reedswitch",
+					"pin": 8
+				},
+				"mydht":
+				{
+					"name": "my dht",
+					"type": "dht",
+					"model": "DHT22",
+					"pin": 6
+				},
+				"myultra":
+				{
+					"name": "my ultrasonic",
+					"type": "ultrason",
+					"dist_tolerance": 2,
+					"pin": 3,
+					"pin_trg": 5
+				},
+				"mypir":
+				{
+					"name": "my pir",
+					"type": "pir",
+					"pin": 4
+				}
+			}
+		},
+		"delta_node": {
+			"enabled": 0,
+			"node_id": "24",
+			"sensors": {
+				"myswitch":
+				{
+					"name": "my reed",
+					"type": "reedswitch",
+					"pin": 8
+				},
+				"mydht":
+				{
+					"name": "my dht",
+					"type": "dht",
+					"model": "DHT22",
+					"pin": 6
+				},
+				"mypir":
+				{
+					"name": "my pir",
+					"type": "pir",
+					"pin": 4
+				}
+			}
+		},
+		"kitchen_node": {
+			"enabled": 1,
+			"node_id": "25",
+			"sensors": {
+				"myswitch":
+				{
+					"name": "my reed",
+					"type": "reedswitch",
+					"pin": 8
+				},
+				"mydht":
+				{
+					"name": "my dht",
+					"type": "dht",
+					"model": "DHT11",
+					"pin": 6
+				},
+				"mysound":
+				{
+					"name": "my sound",
+					"type": "sound",
+					"pin": 7
+				}
+			}
+		}
+	}
+}
